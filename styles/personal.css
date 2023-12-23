@@ -1,8 +1,7 @@
 .personal__data{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    width: 399px;
+    min-width: 400px;
     border-radius: 16px;
     padding:16px;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
@@ -31,3 +30,8 @@ margin-bottom: 32px;
     justify-content: space-between;
 }
 
+@media(max-width:480px){
+    .personal__data{
+        min-width: 300px;
+    }
+}

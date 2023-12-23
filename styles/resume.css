@@ -1,5 +1,5 @@
 .resume__page{
-    width: 880px;
+    max-width: 880px;
     margin-left: 32px;
     display: flex;
     flex-direction: column;
@@ -64,4 +64,32 @@
 .contact__item{
     display: flex;
     flex-direction: row;
+}
+
+
+@media(max-width:450px){
+    .resume__page{
+        height: auto;
+    }
+}
+
+
+@media(max-width:988px){
+    .resume__structure{
+        flex-direction: column-reverse;
+    }
+
+    .resume__components{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    .resume__page{
+        height: 1200px;
+    }
+
+  
 }

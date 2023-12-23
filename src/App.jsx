@@ -51,7 +51,7 @@ function App() {
     return (
       <>
       <div className="resume__structure">
-      <div>
+      <div className="resume__components">
       <About downloadPDF={downloadPDF}/>
       <Personal setFirstName={setFirstName} setLastName={setLastName} setRole={setRole} setIntro={setIntro}/>
       <Education setSchoolInput={setSchoolInput}/>
