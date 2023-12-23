@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState , useRef} from "react"
 import Personal  from "./Personal.jsx"
 import Education from "./Education.jsx"
 import Work from './Work.jsx'
@@ -36,16 +36,21 @@ function App() {
   const [phone , setPhone] = useState('7560030517')
   const [address , setAddress] = useState('West New Beverly, Chris Gardens, 38806')
 
-  function downloadPDF(){
-    const capture = document.getElementById('resumePage')
-    html2canvas(capture).then((canvas) => {
-      const imgData = canvas.toDataURL('img/png');
-      const doc = new jsPDF ('p' , 'mm' , 'a4');
-      const componentWidth = doc.internal.pageSize.getWidth();
-      const componentHeight = doc.internal.pageSize.getHeight();
-      doc.addImage(imgData , 'PNG' , 0,0, componentWidth , componentHeight)
-      doc.save('resume.pdf')
+
+  const pdfRef = useRef()
+
+  const downloadPDF = () => {
+    const input = pdfRef.current
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png')
+      const pdf = new jsPDF('p' , 'mm' , 'a4' , true)
+      const pdfWidth = pdf.internal.pageSize.getWidth()
+      const pdfHeight = pdf.internal.pageSize.getHeight()
+      pdf.addImage(imgData , 'PNG', 0, 0, pdfWidth , pdfHeight)
+      pdf.save('resume.pdf')
+
     })
+
   }
 
     return (
@@ -58,7 +63,7 @@ function App() {
       <Work setExpInput={setExpInput}/>
       <Contact setEmail={setEmail} setPhone={setPhone} setAddress = {setAddress}/>
       </div>
-      <div className="resume__page" id="resumePage">
+      <div className="resume__page" id="resumePage" ref={pdfRef}>
         <div className="resume__personal">
          <div className="person__name">
          <h1>{firstName}</h1>
