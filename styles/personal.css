@@ -1,0 +1,33 @@
+.personal__data{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 399px;
+    border-radius: 16px;
+    padding:16px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+-moz-box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+margin-bottom: 32px;
+  
+}
+
+.individual__data{
+    
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        border-radius: 16px;
+        padding:16px;
+        margin-bottom: 32px;
+        border: 2px solid black;
+      
+    
+}
+
+.fullname{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

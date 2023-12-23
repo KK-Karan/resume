@@ -1,0 +1,67 @@
+.resume__page{
+    width: 880px;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+    box-shadow: 0px 0px 30px 0px rgba(140,125,140,1);
+    height: 1080px;
+}
+
+.resume__structure{
+    display: flex;
+    flex-direction: row;
+}
+
+.resume__personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 152, 255);
+    max-height: 108px;
+    width: 100%;
+}
+
+.person__name{
+    display: flex;
+    flex-direction: row;
+}
+
+.resume__education{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(42, 152, 255 , 0.2);
+    margin-top: 16px;
+}
+
+.education__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.individual__education{
+    width: 380px;
+    border-radius: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: rgba(190, 190, 190, 0.2);
+
+}
+
+.contact__section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-left: 64px;
+    gap:32px;
+}
+
+.contact__item{
+    display: flex;
+    flex-direction: row;
+}
